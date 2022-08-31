@@ -1,0 +1,8 @@
+@normalize;
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('../src/fonts/JetBrainsMono-Bold.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
