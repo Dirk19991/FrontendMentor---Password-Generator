@@ -56,5 +56,5 @@ export const passwordValues = {
     'Y',
     'Z',
   ],
-  symbols: ['*', '.', '$', '%'],
+  symbols: ['*', '.', '$', '%', '^', '@'],
 };
