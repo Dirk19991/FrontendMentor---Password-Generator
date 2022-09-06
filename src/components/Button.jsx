@@ -7,10 +7,13 @@ const StyledButton = styled.button`
   height: 60px;
   background-color: rgb(165, 255, 172);
   cursor: pointer;
+  font-size: 1.5rem;
 `;
-export const Button = ({ setPassword, state }) => {
+export const Button = ({ setPassword, state, length }) => {
+  console.log(length);
+
   console.log(
-    generatePassword(10, {
+    generatePassword(length, {
       uppercase: true,
       lowercase: false,
       numbers: false,
@@ -19,8 +22,8 @@ export const Button = ({ setPassword, state }) => {
   );
 
   return (
-    <StyledButton onClick={() => setPassword(generatePassword(10, state))}>
-      Generate
+    <StyledButton onClick={() => setPassword(generatePassword(length, state))}>
+      GENERATE
     </StyledButton>
   );
 };
