@@ -13,21 +13,29 @@ const StyledPassword = styled.div`
   height: 70px;
   background-color: rgb(36, 35, 43);
   display: flex;
-  padding: 0.5rem;
+  padding: 1.5rem;
   align-items: center;
   justify-content: space-between;
   font-size: 2rem;
 `;
 
-export const Header = ({ password }) => {
-  console.log(password);
+const Wrapper = styled.div`
+  cursor: pointer;
+`;
 
+export const Header = ({ password }) => {
   return (
     <>
       <StyledName>Password Generator</StyledName>
       <StyledPassword>
         {password}
-        <FontAwesomeIcon icon={faCopy} color='rgb(165, 255, 172)' />
+        <Wrapper>
+          <FontAwesomeIcon
+            onClick={() => navigator.clipboard.writeText(password)}
+            icon={faCopy}
+            color='rgb(165, 255, 172)'
+          />
+        </Wrapper>
       </StyledPassword>
     </>
   );

@@ -34,12 +34,12 @@ const StyledCheckbox = styled.label`
   }
 
   & span::after {
-    left: 6px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
+    left: 0.33rem;
+    top: 0.12rem;
+    width: 0.3rem;
+    height: 0.55rem;
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 0.16rem 0.16rem 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -55,11 +55,15 @@ const Input = styled.input`
 `;
 const Checkmark = styled.span`
   position: absolute;
-  top: 0;
+  top: 0rem;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 1.15rem;
+  width: 1.15rem;
   background-color: #eee;
+
+  @media (max-width: 600px) {
+    top: 0.35rem;
+  }
 `;
 
 const Flex = styled.div`
@@ -68,6 +72,11 @@ const Flex = styled.div`
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
+  padding: 0.5rem;
+
+  @media (max-width: 600px) {
+    width: 300px;
+  }
 `;
 
 export const Checkboxes = ({ state, setState }) => {

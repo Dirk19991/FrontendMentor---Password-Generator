@@ -12,6 +12,10 @@ export function generatePassword(length, params) {
     }
   }
 
+  if (passwordOptions.length === 0) {
+    throw new Error('Please choose some flags');
+  }
+
   const randomPassword = [];
 
   while (randomPassword.length < length) {
@@ -23,4 +27,26 @@ export function generatePassword(length, params) {
   }
 
   return randomPassword.join('');
+}
+
+export function passwordStrength(length, flags) {
+  if (length <= 5) {
+    return 1;
+  }
+
+  if (length + flags < 14) {
+    return 1;
+  }
+
+  if (length + flags >= 14 && length + flags < 16) {
+    return 2;
+  }
+
+  if (length + flags >= 16 && length + flags < 18) {
+    return 3;
+  }
+
+  if (length + flags === 18) {
+    return 4;
+  }
 }

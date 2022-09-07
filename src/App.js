@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Button } from './components/Button';
 import { Checkboxes } from './components/Checkboxes';
 import { Character } from './components/Character';
+import { Strength } from './components/Strength';
 import { passwordValues } from './passwordValues';
 import Range from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -14,29 +15,41 @@ const StyledApp = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  width: 500px;
+  width: 550px;
   gap: 1.5rem;
+
+  @media (max-width: 600px) {
+    width: 350px;
+  }
 `;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 450px;
+  height: 550px;
   background-color: rgb(36, 35, 43);
-  padding: 0.5rem;
+
   align-items: center;
   justify-content: space-between;
+`;
+
+const StyledRange = styled(Range)`
+  width: 475px;
+
+  @media (max-width: 600px) {
+    width: 325px;
+  }
 `;
 
 export const App = () => {
   const [password, setPassword] = useState('Password');
 
   const [state, setState] = useState({
-    uppercase: false,
-    lowercase: false,
-    numbers: false,
-    symbols: false,
+    uppercase: true,
+    lowercase: true,
+    numbers: true,
+    symbols: true,
   });
 
   const [length, setLength] = useState(1);
@@ -46,29 +59,30 @@ export const App = () => {
       <Header password={password} />
       <Wrapper>
         <Character length={length} setLength={setLength} />
-        <Range
+        <StyledRange
           onChange={(e) => setLength(e)}
-          style={{ width: '475px' }}
           min={1}
           max={10}
           handleStyle={{
             backgroundColor: 'white',
-            height: 28,
+            height: '1.5rem',
             opacity: 1,
-            marginTop: -12,
+            marginTop: '-0.7rem',
 
-            width: 28,
+            width: '1.5rem',
             borderColor: 'white',
           }}
           trackStyle={{
             backgroundColor: 'rgb(165, 255, 172)',
+            width: '100%',
           }}
           railStyle={{
             backgroundColor: 'black',
-            width: 475,
+            width: '90%',
           }}
         />
         <Checkboxes state={state} setState={setState} />
+        <Strength length={length} state={state} />
         <Button length={length} state={state} setPassword={setPassword} />
       </Wrapper>
     </StyledApp>

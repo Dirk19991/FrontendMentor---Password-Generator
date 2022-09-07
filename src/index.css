@@ -6,3 +6,13 @@
   font-style: normal;
   font-weight: normal;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 2px;
+  }
+}

@@ -17,6 +17,12 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
   }
+
+  @media (max-width: 600px) {
+    html {
+      font-size: 12px;
+    }
+  }
 `;
 
 const StyledApp = styled.div`
