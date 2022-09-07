@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/FrontendMentor---Password-Generator/static/css/main.4928b5d7.css",
+    "main.js": "/FrontendMentor---Password-Generator/static/js/main.b78a60b0.js",
+    "static/media/JetBrainsMono-Bold.ttf": "/FrontendMentor---Password-Generator/static/media/JetBrainsMono-Bold.a490f58c0f460cdc1a8d.ttf",
+    "index.html": "/FrontendMentor---Password-Generator/index.html",
+    "main.4928b5d7.css.map": "/FrontendMentor---Password-Generator/static/css/main.4928b5d7.css.map",
+    "main.b78a60b0.js.map": "/FrontendMentor---Password-Generator/static/js/main.b78a60b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4928b5d7.css",
+    "static/js/main.b78a60b0.js"
+  ]
+}
