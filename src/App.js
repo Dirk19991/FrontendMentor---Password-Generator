@@ -38,7 +38,7 @@ const StyledRange = styled(Range)`
   width: 475px;
 
   @media (max-width: 600px) {
-    width: 325px;
+    width: 315px;
   }
 `;
 
@@ -74,11 +74,9 @@ export const App = () => {
           }}
           trackStyle={{
             backgroundColor: 'rgb(165, 255, 172)',
-            width: '100%',
           }}
           railStyle={{
             backgroundColor: 'black',
-            width: '90%',
           }}
         />
         <Checkboxes state={state} setState={setState} />
